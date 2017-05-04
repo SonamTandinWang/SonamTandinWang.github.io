@@ -1,1 +1,363 @@
-hello world
+<!DOCTYPE html>
+<html>
+<head>
+	<title>STW</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- <script src="js/bootstrap.min.js"></script> -->
+  <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+  <script src="app.js" type="text/javascript"></script>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link href="css/bootstrap.css" rel="stylesheet"> -->
+
+</head>
+  <body>
+      <!-- MENU -->
+      <div id="nav">
+        <ul>
+          <a href="#about-me-section">
+            <li class="nav-button" id="about-me">about me</li>
+          </a>
+          <a href="#portfolio-section">
+            <li class="nav-button" id="portfolio">portfolio</li>
+          </a>          
+          <a href="#resume-section">
+          <li class="nav-button" id="resume">resume</li>
+          </a>
+        </ul>  
+      </div>
+
+    <!-- LANDING PAGE -->
+    <div class="vp-height">
+
+      <!-- business card -->
+      <div id="business-card" class="basic-border vp-height card card-1">
+        <div class="business-card-container">
+          <h1>Sonam T. Wang</h1>
+          <p class="italics">Product-designer and front-end web developer From Bhutan, based in Brooklyn, 23.</p>
+        </div>
+      </div>
+
+      </div>
+
+    <!-- ABOUT ME -->
+    <div id="about-me-section" class="vp-height">
+      <h1 class="page-header">
+        <a>about me</a>
+      </h1>
+      <hr>
+      <div id="about-me-container">
+        <div>
+          <span>
+            Hi! I'm Sonam, a product designer and web developer based in NYC. 
+          </span>
+          <br>
+          <span>
+            Global citizen, outdoor enthusiasit, and optomist extrodinare. 
+          </span>
+          <br>
+          <br>
+          <span>I also make music as
+            <a href="https://soundcloud.com/delacourbeats/tracks">delacour.</a>
+           </span>
+           <br>
+           <br>
+           <span>If you want to know more about me you can check out my
+             <a href=""> full bio.</a>
+            </span>
+        </div>
+        <span class="stick-to-floor">Hiring? Check out my
+        <a href="">resume here.</a>
+        </span>
+      </div>
+    </div>
+
+    <!-- PORTFOLIO -->
+    <div class="vp-height" id="portfolio-section">
+      <h1 class="page-header">portfolio</h1>
+      <hr>
+      <div>
+        <h2 class="page-header2">Case Studies</h2>
+      </div>
+      <div id="case-study-modal" class="basic-border vp-height card card-1">
+        <div class="case-study-container">
+          <img class="company-logo" src="images/po_logo.svg">
+          <ul class="case-studies">
+            <li id="case-study-button" class="basic-border" onclick="openDueDatesCaseStudy()">Release & Due Dates</li>
+            <li></li>
+            <li id="case-study-button" class="basic-border" onclick="openFacultyExperienceRevision()"">Handsfree Onboarding</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- DUE AND RELEASE DATES -->
+    <div id="release-and-due-dates" class="case-study-window">
+      <header>
+        <span class="basic-border closeButton" onclick="closeReleaseAndDueDates()">Back</span>
+        <h1>Release & Due Dates</h1>
+      </header>
+
+      <div class="container">
+      <!-- BLURB   -->
+        <div class="page-margins col-md-12">
+          <div id="blurb" class="row">
+            <div class="col-sm-6">
+              <img class="company-logo-cs" src="images/po_logo_plain.svg">
+            </div>
+            <div class="col-sm-6">
+              <p class="company-blurb col-sm-10">
+                panOpen is a platform for faculty and students in higher ed aimed at 
+                lowering the cost of education and mainstreaming OER's prevalence as
+                an alternate to the commercial publisher textbooks with powerful OER 
+                customization and sharing technology.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12 border-top" id="literally-never-do-this"></div>
+
+        <div class="container">
+        <!-- TEXT -->
+          <div class="row col-md-12">
+            <div class="col-sm-6">
+              <h3>Problem</h3>
+              <p>
+                One of the ways panOpen made OER a more powerful alternative is by 
+                empowering the faculty with tools to intergrate interactive methods 
+                of learning right into the digital textbook. As such we had developed
+                a heavy suite of tools for assessment creation!
+              </p>
+              <li></li>
+              <p>
+                We encountered this project as a result of faculty directly requesting
+                a feature enabling them to set due and release dates for items in the
+                course OER content (e-book). One of the major reasons for this was
+                that they wanted to be the amount of content students were able to
+                digest. The due dates was to make sure they could maintain that
+                students were advancing at the same pace with the rest of their class.
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <h3>Process Flow</h3>
+                <li></li>
+              <ul>
+                <li class="flow-chart-header" onclick="openSubSection(this)">Feature Request</li>
+                  <li class="sub-section hidden" id="Feature Request">Discovered the problem through direct faculty
+                  request.</li>
+                <li class="flow-chart-header" onclick="openSubSection(this)">Research</li>
+                  <li class="sub-section hidden">Assessed how other learning tools satisfied this user need in particular and cross referenced what professors were asking for.</li>
+                <li class="flow-chart-header" onclick="openSubSection(this)">Mockup</li>
+                  <li class="sub-section hidden">Using my favorite design tool - Adobe XD, my role in the process began by taking charge of the initial mockup after a quick slack collaboration on a concept and a screenshot frankenstein psd. for reference.</li>
+                <li class="flow-chart-header" onclick="openSubSection(this)">Internal Review & Revision</li>
+                  <li class="sub-section hidden">The product and customer sucess teams were passed invision links to the first draft. Collaborating with the dev team started here.</li>
+                <li class="flow-chart-header" onclick="openSubSection(this)">Controlled Release & User Tests</li>
+                <li class="flow-chart-header" onclick="openSubSection(this)">Iteration & Production Push</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row col-md-12 panel-padding">
+            <h3>My Role</h3>
+            <p>
+              My first encounter with this project came during the "Research" part of the process flow. I sat in on a call with our in house product designer, a user and our customer service team to discuss the "due dates and release dates" story that had now landed on my lap. We established what the goal of the feature was to be and some hints as to what the faculty were accostumed to in their experience. 
+            </p>
+            <li></li>
+            <p>
+              I really got to sink my teeth into the project while putting together the mockup. I quickly reconstructed the page in question in Adobe XD. Guided by a screenshot frankenstein wireframe that my teammate I designed the most lightweight solution possible. 
+            </p>
+            <li></li>
+            <p>
+              Through my development experience in the application, I knew there were a few places i could really cut deep and keep the story a lean operation. 
+              I utuilized plugins i knew we had intergrated for calendars. And with my knowledge of bootstrap, grided my designs into the columns necessary for a responsive and most importantly non-deconstructive implementation process. After another round of internal review, we had something ready for testing.
+            </p>
+            <li></li>
+            <p>
+              I worked my fellow product designer to orchestrate usability tests with the faculty who had requested the feature. With the feedback we got I put some finishing touches on the mockups and the designs hopped into our next sprint in the form of a production feature build. I worked with the developers involved with building how i wanted the plugins implemented as well as the logic in functionality for the due dates and release dates not only for the faculty users, but also the students. 
+            </p>
+            <img src="images/due_dates2.png" class="img-responsive card-1 img-padding">
+          </div>  
+        </div>
+
+        <div class="container">
+        <!-- TEXT -->
+          <div class="row col-md-12">
+            <div class="col-sm-6">
+              <h3>Feature Flagging</h3>
+              <p>
+                The first round of formal testing came swiftly because in tandem with building out the story, we had built the groundwork for feature flagging. 
+                We engaged and flagged the faculty involved with bringing the request forward for a first hand look and a formal initial round of user testing 
+                and interviewing.
+              </p>
+              <li></li>
+              <p>
+                As easy as it can be to feel done with a story, theres nothing like a user review to keep your head out of the clouds. There was a painfully 
+                clear issue with the efficincey of the UI that occured almost immediatley as the faculty dug into the new tools. Our theory that faculty 
+                would want a tool to mark and set multiple dates at the same time turned out to be just so, a lot of our testers had lost track of where 
+                the set date button was. 
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <h3>Iteration II</h3>
+                <li></li>
+              <p>
+                To combat the issue I collaborated with our lead designer once again. After the call we had already both come up with solutions to bring to the table. 
+                The ultimate goal of our final iteration would be to solve the problem of faculty "losing" their set date buttons. With an overflowing scrollable element
+              </p>
+              <li></li>
+              <p>
+                on the page our UI problem was clear. Our solution was to make the controls "sticky" fixing to the top of the window. This would enable our faculty 
+                never lost track of their controls after scrolling beyond their initial position on the page.
+              </p>
+              <p>
+                This high resolution gif demonstrates the iteration that we decided on. By sticking the menu to the roof of the window, we solved the problem of our users lossing track of where their control is. Other use cases involve selcting items that spanned a larger height than the window could permit.
+              </p>
+            </div>
+          </div>
+          <img src="images/po_sticky.gif" class="img-responsive card-1 img-padding col-sm-12">
+        </div>
+        <div>
+
+    <!-- HANDSFREE-ONBOARDING -->
+    <div id="faculty-experience-revision" class="case-study-window">
+      <header>
+        <span class="basic-border closeButton" onclick="closFacultyExperienceRevision()">Back</span>
+        <h1>Faculty Experience Revision</h1>
+      </header>
+      <div class="container">
+      <!-- BLURB   -->
+        <div class="page-margins col-md-12">
+          <div id="blurb" class="row">
+            <div class="col-sm-6">
+              <img class="company-logo-cs" src="images/po_logo_plain.svg">
+            </div>
+            <div class="col-sm-6">
+              <p class="company-blurb col-sm-10">
+                panOpen is a platform for faculty and students in higher ed aimed at 
+                lowering the cost of education and mainstreaming OER's prevalence as
+                an alternate to the commercial publisher textbooks with powerful OER 
+                customization and sharing technology.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12 border-top" id="literally-never-do-this"></div>
+
+        <div class="container">
+        <!-- TEXT -->
+          <div class="row col-md-12">
+            <div class="col-sm-6">
+              <h3>Problem</h3>
+              <p>
+                Through running usability tests, myself and the senior designer at panOpen discovered major UX and UI inefficiencies that translated directly into a business problem. The problems in the experience and interface weighed heavily on the lack of intuitiveness. This in turn disabled an independent signup process for users.
+              </p>
+              <li></li>
+              <h3>The Breakdown</h3>
+              <li></li>
+              <p class="italicised">UX & UI</p>
+              <li></li>
+              <p>
+                Keeping in mind that this product is built for faculty in higher ed, the usability tests revealed that creating courses and assigning content to the courses was tough to figure out. Specifically that there were too many steps and consequent navigations involved in the process that lead the user to loose track of context and making their initial contact with the app a tough learning curve.
+              </p> 
+              <li></li>
+              <p>
+                The UI failure was largely in the screen real-estate. Watching the users search for their success showed that some components in the UI were real dead-zones in the 1366x768 grid, wasted space.
+                This was important to us because our panOpen application hosted a huge suite of features which had to be tucked away in the UI because of the immense amount of data that we were rendering to the GUI real estate.
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <h3>Process Flow</h3>
+              <li></li>
+              <ul>
+                <li class="flow-chart-header">User Testing</li>
+                <li class="flow-chart-header">Analysis and Product Evaluation</li>
+                <li class="flow-chart-header">Mockups</li>
+                <li class="flow-chart-header">Internal Review</li>
+                <li class="flow-chart-header">Implementation</li>
+                <li class="flow-chart-header">Controlled Release & User Tests</li>
+                <li class="flow-chart-header">Revisions</li>
+                <li class="flow-chart-header">Production Push</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row col-md-12 panel-padding">
+            <li></li>
+            <p class="italicised">Business Case</p>
+            <p>
+              Without a 5 minute account creation and primary goal success, our business took a direct hit. The lack of intuitiveness resulted in the customer success team having to on board faculty 1 on 1. 
+              This process had become a bottleneck in our scaling as well as efficiency of sales. The EdTech industry is primarily b2b, we target the faculty and try to on board them, but we wanted to try and adopt the organic signup, moving into the direction of a handsfree user account creation and seamless integration with their classes. This would change the game of how we were adopted and open the doors wide to all faculty and hence growing the OER community in higher Ed. 
+            </p>
+          </div>  
+        </div>
+
+        <div class="container">
+        <!-- TEXT -->
+          <div class="row col-md-12 panel-padding">
+              <h3>My Role</h3>
+              <p class="italicised">Mockup Draft #1</p>
+              <p>
+                This was one of the projects that I was fortunate enough to be involved in all the moving parts of. I spearheaded the UX and UI redesign project on Adobe Experience Design and fleshed out the new concept with a few major themes in mind: 
+                <ul>
+                  <li class="flow-chart-header">Screen Real Etate Proioritization</li>
+                  <li class="flow-chart-header">UI Heirarchy and Design Language Standardization</li>
+                  <li class="flow-chart-header">Navigational Solution</li>
+                  <li class="flow-chart-header">Keeping it lean</li>
+                </ul>
+              </p>
+              <p>Here is a sample of original</p>
+              <img src="images/panopen_original.png" class="img-responsive card-1 img-padding col-sm-12">
+              <p>And a sample of the update. Man those buttons really do POP!</p>
+              <img src="images/my_design.png" class="img-responsive card-1 img-padding col-sm-12">
+              <p class="italicised">Team Collaboration</p>
+              <p>
+                I paired up with our senior designer to revise and lean-ify the updates I had drawn up. The outcome was a few experiences and flow updates as well as removing a extra bells and whistles that didn't have any or enough measurable impact on user sucess. #leanAF
+              </p>
+              <p>
+                The whole product team huddled and decided on a way to slot it into our product road map and how to delegate the work.
+                I huddled with QA for a bit to create acceptance criteria and formulate stories with the clearest language we could.
+              </p>
+              <p>
+                During the life of its implementation I touched base with developers overseeing the construction and ensuring sure all interactions were translating from design to code correctly. This ranged from me turning around and taking a look over the shoulder to sometimes talking design and quickly updating stories together to solve communication errors.
+              </p>
+              <li></li>
+              <img src="images/overview_shot.png" class="img-responsive card-1 img-padding">
+          </div>
+        </div>
+        <div>
+    </div>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
